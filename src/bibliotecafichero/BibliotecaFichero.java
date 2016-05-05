@@ -16,7 +16,7 @@ public class BibliotecaFichero {
      */
     public static void main(String[] args) {
         Menu m = new Menu();
-        System.out.println("hola");
+       
     }
     
 }
