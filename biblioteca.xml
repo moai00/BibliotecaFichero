@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_73" class="java.beans.XMLDecoder">
+ <object class="bibliotecafichero.ListaLibros" id="ListaLibros0">
+  <void property="lista">
+   <void method="add">
+    <object class="bibliotecafichero.Libro">
+     <void property="NPaginas">
+      <int>1000</int>
+     </void>
+     <void property="autor">
+      <string>Miguel de Cervantes</string>
+     </void>
+     <void property="genero">
+      <string>Aventuras</string>
+     </void>
+     <void property="id">
+      <string>01</string>
+     </void>
+     <void property="precio">
+      <double>25.0</double>
+     </void>
+     <void property="titulo">
+      <string>El Quijote</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="bibliotecafichero.Libro">
+     <void property="NPaginas">
+      <int>120</int>
+     </void>
+     <void property="autor">
+      <string>Juan Rulfo</string>
+     </void>
+     <void property="enPrestamo">
+      <boolean>true</boolean>
+     </void>
+     <void property="genero">
+      <string>Aventuras</string>
+     </void>
+     <void property="id">
+      <string>02</string>
+     </void>
+     <void property="precio">
+      <double>12.0</double>
+     </void>
+     <void property="titulo">
+      <string>Pedro Paramo</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="bibliotecafichero.Libro">
+     <void property="NPaginas">
+      <int>400</int>
+     </void>
+     <void property="autor">
+      <string>Gustave Flaubert</string>
+     </void>
+     <void property="enPrestamo">
+      <boolean>true</boolean>
+     </void>
+     <void property="genero">
+      <string>Romantica</string>
+     </void>
+     <void property="id">
+      <string>03</string>
+     </void>
+     <void property="precio">
+      <double>20.0</double>
+     </void>
+     <void property="titulo">
+      <string>Madame Bovary</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

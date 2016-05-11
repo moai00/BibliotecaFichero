@@ -35,13 +35,16 @@ public class Menu {
                     altaLibro();
                     break;
                 case 2:
+                    libroXcodigo();
                     break;
                 case 3:
+                    libroXgenero();
                     break;
                 case 4:
                     libroGordo();
                     break;
                 case 5:
+                    totales();
                     break;
                 case 6:
                     listadoLibros();
@@ -55,6 +58,57 @@ public class Menu {
 
         } while (opcion != 7);
 
+    }
+    
+    private void totales(){
+        
+        
+        
+        System.out.println("La biblioteca tiene " + misLibros.cantidad() + " libros");
+        System.out.println("La biblioteca cuesta: " + misLibros.preciototal() + " euros");
+        System.out.println("La biblioteca tiene: " + misLibros.prestados() + " libros prestados");
+    }
+    
+    private void libroXgenero(){
+        int cantidad = misLibros.cantidad();
+        if (cantidad == 0){
+            System.out.println("No hay Libros en la biblioteca");
+            
+        }else{
+            String genero= EntradaDatos.pedirCadena("Introduce el genero");
+            boolean encontrado = false;
+            for (int i = 0; i<cantidad; i++){
+                Libro actual = misLibros.obtenerLibro(i);
+                if (genero.equalsIgnoreCase(actual.getGenero())){
+                    System.out.println(actual);
+                    encontrado =  true;
+                }
+            }
+            if(!encontrado){
+                System.out.println("No hay libros de ese genero");
+            }
+        }
+        
+    }
+    
+    private void libroXcodigo(){
+        int cantidad = misLibros.cantidad();
+        if (cantidad == 0){
+            System.out.println("No hay libros en la biblioteca");
+        }else{
+            String codigo = EntradaDatos.pedirCadena("Introduce un codigo");
+            boolean encontrado = false;
+            for(int i = 0; i<cantidad; i++){
+                Libro actual = misLibros.obtenerLibro(i);
+                if (codigo.equalsIgnoreCase(actual.getId())){
+                    System.out.println(actual);
+                    encontrado = true;
+                }
+            }
+            if(!encontrado){
+                System.out.println("No hay libros con ese codigo");
+            }
+        }
     }
     
     private void libroGordo(){

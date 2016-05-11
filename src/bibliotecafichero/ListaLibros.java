@@ -27,28 +27,28 @@ public class ListaLibros implements Serializable {
  
  
  //devuelve libros por id
- public Libro libroXId(String id){
-     for (Libro l : lista){
-         if (l.getId().equalsIgnoreCase(id)){
-             return l;
-         }
-     }
-     
- 
-    return null;
-}
+// public Libro libroXId(String id){
+//     for (Libro l : lista){
+//         if (l.getId().equalsIgnoreCase(id)){
+//             return l;
+//         }
+//     }
+//     
+// 
+//    return null;
+//}
 
  //devuelve libros por genero
-public Libro libroXGenero(String genero){
-     for (Libro l : lista){
-         if (l.getId().equalsIgnoreCase(genero)){
-             return l;
-         }
-     }
-     
- 
-    return null;
-} 
+//public Libro libroXGenero(String genero){
+//     for (Libro l : lista){
+//         if (l.getId().equalsIgnoreCase(genero)){
+//             return l;
+//         }
+//     }
+//     
+// 
+//    return null;
+//} 
 
 //devuelve libro más gordo
 
@@ -68,6 +68,28 @@ public Libro gordo(){
 
 public boolean existe (Libro l){
     return lista.contains(l);
+}
+
+public double preciototal(){
+    double total = 0;
+    
+    for (Libro l : lista){
+        total = total + l.getPrecio();
+    }
+    
+    return total;
+}
+
+public int prestados(){
+    int total= 0;
+    
+    for (Libro l : lista){
+        if (l.isEnPrestamo()){
+            total = total +1;
+        }
+    }
+    
+    return total;
 }
 
 public int cantidad(){
